@@ -39,8 +39,10 @@ footer a {color: #fff;}
 .box {
   position: relative;
   margin: auto;
+  cursor: pointer;
   -webkit-transition: all 1s;
   -webkit-transform-style: preserve-3d;
+
 }
 .box.show-two   { -webkit-transform: rotateY(  -90deg ); }
 .box.show-three { -webkit-transform: rotateY( -180deg ); }
