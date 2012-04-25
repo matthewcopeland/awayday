@@ -8,11 +8,12 @@ header, footer {
   line-height: 50px;
   vertical-align: middle;
   text-align: center;
-  background: #333;
   text-shadow: 0px -1px 1px rgba(0,0,0, 1);
   -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0, .7);
      -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0, .7);
           box-shadow: 0px 1px 8px 0px rgba(0,0,0, .7);
+  background-color: #333;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
 }
 
 header {top:0;right:0;left:0;}
@@ -50,6 +51,22 @@ article {
   padding: 20px;
   -webkit-backface-visibility: hidden;
 }
+article:after {
+  content: "\02192";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: rgba(255,255,255, .2);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+article.side.four:after { content: "\021bb";}
+article:hover:after {       box-shadow: 0 2px 3px 0 rgba(0,0,0, .4); }
+article:active:after { inset box-shadow: 0 2px 3px 0 rgba(0,0,0, .4); }
 
 .side.one   {  -webkit-transform:                   translateZ( 100px ); }
 .side.two   {  -webkit-transform: rotateY(  90deg ) translateZ( 100px ); }
@@ -58,9 +75,6 @@ article {
 .side.top  {   -webkit-transform: rotateX(  90deg ) translateZ( 100px ); }
 .side.bottom{  -webkit-transform: rotateX( 270deg ) translateZ( 300px ); }
 
-.side.top {background-color: red;}
-.side.bottom {background-color: black;}
-.side.top, .side.bottom {height: 200px;}
 /* colors */
 .side.one{
 background: -moz-radial-gradient(center, ellipse cover, rgba(120,122,193,1) 0%, rgba(82,83,132,1) 100%);
@@ -78,10 +92,16 @@ background: -webkit-radial-gradient(center, ellipse cover, rgba(89,127,77,1) 0%,
 background: -moz-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%, rgba(48,157,207,1) 100%);
 background: -webkit-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%,rgba(48,157,207,1) 100%);
 }
+.side.top {background-color: red;}
+.side.bottom {background-color: black;}
+.side.top, .side.bottom {height: 200px;}
+
+
 
 .ball {
   position: absolute;
   bottom: -15px;
+  left: 0;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -89,7 +109,6 @@ background: -webkit-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%
   background: -webkit-radial-gradient(center, ellipse cover, rgba(255,103,15,1) 0%,rgba(255,103,15,1) 100%);
   -webkit-animation: bounce .5s  infinite alternate;
 }
-
 
 /* animations! */
 @-webkit-keyframes bounce {
