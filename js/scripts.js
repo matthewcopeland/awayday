@@ -2,6 +2,7 @@ $(function() {
   
   $('.one').click(function(){
     $('.box').addClass('show-two');
+    $('.profile').addClass('activated');
   });
 
   $('.two').click(function(){
@@ -16,11 +17,22 @@ $(function() {
 
   $('.four').click(function(){
     $('.box').removeClass('show-four');
+    $('.profile').removeClass('activated');
   });
 
-
-  $('.stamp').click(function(){
-    $(this).toggleClass('fly');
+  $('#matt').click(function(){
+    $('.box').removeClass('see_tom');
+    $('.box').addClass('see_matt');
+  })
+  $('#tom').click(function(){
+    $('.box').removeClass('see_matt');
+    $('.box').addClass("see_tom");
+  })
+  $('.bottom').click(function(){
+    $('.box').removeClass('see_matt');
+  })
+  $('.top').click(function(){
+    $('.box').removeClass('see_tom');
   })
 
 });
