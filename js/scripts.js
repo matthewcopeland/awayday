@@ -18,4 +18,9 @@ $(function() {
     $('.box').removeClass('show-four');
   });
 
+
+  $('.stamp').click(function(){
+    $(this).toggleClass('fly');
+  })
+
 });

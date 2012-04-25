@@ -14,6 +14,7 @@ header, footer {
      -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0, .7);
           box-shadow: 0px 1px 8px 0px rgba(0,0,0, .7);
 }
+
 header {top:0;right:0;left:0;}
 footer {right:0;bottom:0;left:0;}
 footer a {color: #fff;}
@@ -25,15 +26,12 @@ footer a {color: #fff;}
   right: 0;
   bottom: 50px;
   left: 0;
-  -webkit-perspective: 400px;
-  -moz-perspective: 400px;
-  -ms-perspective: 400px;
-  -o-perspective: 400px;
-  perspective: 400px;
+  -webkit-perspective: 1200px;
+  -webkit-perspective-origin: 25% 100%;
 }
 
 .box, article {
-  height: 200px;
+  height: 400px;
   width: 200px; 
 }
 .box {
@@ -42,7 +40,6 @@ footer a {color: #fff;}
   cursor: pointer;
   -webkit-transition: all 1s;
   -webkit-transform-style: preserve-3d;
-
 }
 .box.show-two   { -webkit-transform: rotateY(  -90deg ); }
 .box.show-three { -webkit-transform: rotateY( -180deg ); }
@@ -58,48 +55,46 @@ article {
 .side.two   {  -webkit-transform: rotateY(  90deg ) translateZ( 100px ); }
 .side.three {  -webkit-transform: rotateY( 180deg ) translateZ( 100px ); }
 .side.four  {  -webkit-transform: rotateY( 270deg ) translateZ( 100px ); }
+.side.top  {   -webkit-transform: rotateX(  90deg ) translateZ( 100px ); }
+.side.bottom{  -webkit-transform: rotateX( 270deg ) translateZ( 300px ); }
+
+.side.top {background-color: red;}
+.side.bottom {background-color: black;}
+.side.top, .side.bottom {height: 200px;}
 /* colors */
 .side.one{
-background: rgb(120,122,193);
 background: -moz-radial-gradient(center, ellipse cover, rgba(120,122,193,1) 0%, rgba(82,83,132,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(120,122,193,1)), color-stop(100%,rgba(82,83,132,1)));
 background: -webkit-radial-gradient(center, ellipse cover, rgba(120,122,193,1) 0%,rgba(82,83,132,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(120,122,193,1) 0%,rgba(82,83,132,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(120,122,193,1) 0%,rgba(82,83,132,1) 100%);
-background: radial-gradient(center, ellipse cover, rgba(120,122,193,1) 0%,rgba(82,83,132,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787ac1', endColorstr='#525384',GradientType=1 );
 }
 .side.two {
-background: rgb(199,120,198);
 background: -moz-radial-gradient(center, ellipse cover, rgba(199,120,198,1) 0%, rgba(137,83,136,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(199,120,198,1)), color-stop(100%,rgba(137,83,136,1)));
 background: -webkit-radial-gradient(center, ellipse cover, rgba(199,120,198,1) 0%,rgba(137,83,136,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(199,120,198,1) 0%,rgba(137,83,136,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(199,120,198,1) 0%,rgba(137,83,136,1) 100%);
-background: radial-gradient(center, ellipse cover, rgba(199,120,198,1) 0%,rgba(137,83,136,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c778c6', endColorstr='#895388',GradientType=1 );
 }
 .side.three {
-background: rgb(89,127,77);
 background: -moz-radial-gradient(center, ellipse cover, rgba(89,127,77,1) 0%, rgba(64,92,56,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(89,127,77,1)), color-stop(100%,rgba(64,92,56,1)));
 background: -webkit-radial-gradient(center, ellipse cover, rgba(89,127,77,1) 0%,rgba(64,92,56,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(89,127,77,1) 0%,rgba(64,92,56,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(89,127,77,1) 0%,rgba(64,92,56,1) 100%);
-background: radial-gradient(center, ellipse cover, rgba(89,127,77,1) 0%,rgba(64,92,56,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#597f4d', endColorstr='#405c38',GradientType=1 );
 }
 .side.four {
-background: rgb(99,182,219);
 background: -moz-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%, rgba(48,157,207,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(99,182,219,1)), color-stop(100%,rgba(48,157,207,1)));
 background: -webkit-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%,rgba(48,157,207,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%,rgba(48,157,207,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%,rgba(48,157,207,1) 100%);
-background: radial-gradient(center, ellipse cover, rgba(99,182,219,1) 0%,rgba(48,157,207,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63b6db', endColorstr='#309dcf',GradientType=1 );
 }
 
+.ball {
+  position: absolute;
+  bottom: -15px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,103,15,1) 0%, rgba(255,103,15,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,103,15,1) 0%,rgba(255,103,15,1) 100%);
+  -webkit-animation: bounce .5s  infinite alternate;
+}
+
+
 /* animations! */
-@-webkit-keyframes zoomy {
+@-webkit-keyframes bounce {
+  0%    { bottom: -15px; height: 70px;  width: 110px; border-bottom: 1px solid #000; }
+  10%   {                               width: 100px; border-bottom: 3px solid rgba(0,0,0, .4);}
+  20%   { height: 100px; }
+  100%  { bottom: 100px; }
 }
