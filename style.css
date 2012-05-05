@@ -134,3 +134,11 @@ article:active:after { inset box-shadow: 0 2px 3px 0 rgba(0,0,0, .4); }
   20%   { }
   100%  { bottom: 100px; height: 100px;}
 }
+
+
+/* rwd */
+@media screen and (max-width: 420px) {
+  .box-wrapper { height: 100%; }
+  .box { top: 0px; }
+  footer { display: none; }
+}
