@@ -3,6 +3,7 @@
 body {
   color: #fff;
   text-align: center;
+  min-height: 480px;
   background:
     -webkit-radial-gradient(black 15%, transparent 16%) 0 0,
     -webkit-radial-gradient(black 15%, transparent 16%) 8px 8px,
@@ -128,6 +129,7 @@ article:active:after { inset box-shadow: 0 2px 3px 0 rgba(0,0,0, .4); }
   width: 180px;
   height: 241px;
   position: fixed;
+  z-index: 1;
   top: 50%;
   margin-top: -120px;
   box-shadow: 0 3px 10px 1px rgba(0,0,0, .8);
